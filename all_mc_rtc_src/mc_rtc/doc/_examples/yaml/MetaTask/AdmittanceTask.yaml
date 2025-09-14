@@ -1,0 +1,14 @@
+type: admittance
+frame: LeftFootCenter
+targetFrame:
+  robot: ground
+  frame: AllGround
+  offset:
+    translation: [0.0, 0.0, 0.1]
+    rotation: [3.14, 0.0, 0.0]
+wrench:
+  couple: [0.0, 0.0, 0.0]
+  force: [0.0, 0.0, 20.0]
+admittance:
+  couple: [0.0, 0.0, 0.0]
+  force: [0.0, 0.0, 0.0005]

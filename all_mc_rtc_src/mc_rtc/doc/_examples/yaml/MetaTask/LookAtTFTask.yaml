@@ -1,0 +1,5 @@
+type: lookAtTF
+frame: bodyName
+frameVector: [1, 0, 0]
+sourceFrame: robot_map
+targetFrame: target_name

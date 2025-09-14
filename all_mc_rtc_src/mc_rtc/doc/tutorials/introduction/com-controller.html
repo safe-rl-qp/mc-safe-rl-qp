@@ -1,0 +1,46 @@
+---
+layout: tutorials
+toc: true
+add_contact_sources:
+  - name: C++
+    lang: cpp
+    translate: tutorials/introduction/com-controller/add_contact_sources.cpp
+  - name: Python
+    lang: python
+    translate: tutorials/introduction/com-controller/add_contact_sources.py
+create_com_task_sources:
+  - name: C++
+    lang: cpp
+    translate: tutorials/introduction/com-controller/create_com_task_sources.cpp
+  - name: Python
+    lang: python
+    translate: tutorials/introduction/com-controller/create_com_task_sources.py
+switch_com_sources:
+  - name: C++
+    lang: cpp
+    translate: tutorials/introduction/com-controller/switch_com_sources.cpp
+  - name: Python
+    lang: python
+    translate: tutorials/introduction/com-controller/switch_com_sources.py
+run_sources:
+  - name: C++
+    lang: cpp
+    source: |
+      bool MyFirstController::run()
+      {
+        if(comTask->eval().norm() < 0.01)
+        {
+          switch_com_target();
+        }
+        return mc_control::MCController::run();
+      }
+  - name: Python
+    lang: python
+    source: |
+      def run_callback(self):
+          if self.comTask.eval().norm() < 0.01:
+              self.switch_com_target()
+          return True
+---
+
+{% translate_file tutorials/introduction/com-controller.html %}

@@ -1,0 +1,115 @@
+- name: HRP-2-Kai
+  icon: hrp2.jpg
+  pkg:
+    desc:
+      url: https://github.com/isri-aist/hrp2_drc_description
+      name: hrp2_drc
+    module:
+      url: https://github.com/isri-aist/mc-hrp2
+      name: mc-hrp2
+- name: HRP-4-LIRMM
+  icon: hrp4.jpg
+  pkg:
+    desc:
+      url: https://gite.lirmm.fr/mc-hrp4/hrp4
+      name: hrp4
+    module:
+      url: https://gite.lirmm.fr/mc-hrp4/mc-hrp4
+      name: mc-hrp4
+- name: HRP-4J
+  icon: hrp4.jpg
+  pkg:
+    desc:
+      url: https://gite.lirmm.fr/mc-hrp4/hrp4j_description
+      name: hrp4j_description
+    module:
+      url: https://gite.lirmm.fr/mc-hrp4/mc_hrp4j
+      name: mc_hrp4j
+- name: HRP-4CR
+  icon: hrp4cr.jpg
+  pkg:
+    desc:
+      url: https://github.com/isri-aist/hrp4cr_description
+      name: hrp4cr_description
+    module:
+      url: https://github.com/isri-aist/mc_hrp4cr
+      name: mc_hrp4cr
+- name: HRP-5P
+  icon: hrp5p.jpg
+  pkg:
+    desc:
+      url: https://github.com/isri-aist/hrp5_p_description
+      name: hrp5_p_description
+    module:
+      url: https://github.com/isri-aist/mc_hrp5_p
+      name: mc_hrp5_p
+- name: Nao
+  icon: nao.jpg
+  pkg:
+    desc:
+      url: https://github.com/jrl-umi3218/nao_description
+      name: nao_description
+    module:
+      url: https://github.com/jrl-umi3218/mc_nao
+      name: mc_nao
+- name: Pepper
+  icon: pepper.jpg
+  pkg:
+    desc:
+      url: https://github.com/jrl-umi3218/pepper_description
+      name: pepper_description
+    module:
+      url: https://github.com/jrl-umi3218/mc_pepper
+      name: mc_pepper
+- name: Panda
+  icon: panda.png
+  pkg:
+    module:
+      url: https://github.com/jrl-umi3218/mc_panda
+      name: mc_panda
+- name: Sawyer
+  icon: sawyer.jpg
+  pkg:
+    desc:
+      url: https://github.com/jrl-umi3218/sawyer_robot
+      name: sawyer_description
+    module:
+      url: https://github.com/jrl-umi3218/mc-sawyer
+      name: mc-sawyer
+- name: BAZAR
+  desc: Two Kukka-LWR4+ arms mounted on a Neobotix MPO 700 omni-directional mobilebase
+  icon: bazar.jpg
+  pkg:
+    desc:
+      url: https://gite.lirmm.fr/multi-contact/bazar_description
+      name: bazar_description
+    module:
+      url: https://gite.lirmm.fr/multi-contact/mc-bazar
+      name: mc-bazar
+- name: UR5e
+  icon: ur5e.png
+  pkg:
+    desc:
+      url: https://github.com/isri-aist/mc_ur5e_description
+      name: mc_ur5e_description
+    module:
+      url: https://github.com/isri-aist/mc_ur5e
+      name: mc_ur5e
+- name: AlienGo
+  icon: aliengo.jpg
+  pkg:
+    desc:
+      url: https://github.com/isri-aist/mc_aliengo_description
+      name: mc_aliengo_description
+    module:
+      url: https://github.com/rohanpsingh/mc_aliengo
+      name: mc_aliengo
+- name: Fetch
+  icon: fetch_image.png
+  pkg:
+    desc:
+      url: https://github.com/isri-aist/mc_fetch_description
+      name: mc_fetch_description
+    module:
+      url: https://github.com/isri-aist/mc_fetch
+      name: mc_fetch

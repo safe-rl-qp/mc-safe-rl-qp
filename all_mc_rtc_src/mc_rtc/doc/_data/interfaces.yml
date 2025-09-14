@@ -1,0 +1,48 @@
+- name: OpenRTM
+  url: https://openrtm.org/openrtm/
+  icon: openrtm.png
+  pkg:
+    name: mc_openrtm
+    url: https://github.com/jrl-umi3218/mc_openrtm
+- name: ROS
+  icon: ros.png
+  url: https://www.ros.org/
+  pkg:
+    name: mc_rtc_ros
+    url: https://github.com/jrl-umi3218/mc_rtc_ros
+- name: V-REP
+  url: http://coppeliarobotics.com/
+  icon: vrep.png
+  pkg:
+    name: mc_vrep
+    url: https://github.com/jrl-umi3218/mc_vrep
+- name: NAOqi
+  url: http://doc.aldebaran.com/2-5/index_dev_guide.html
+  icon: naoqi.png
+  pkg:
+    name: mc_naoqi
+    url: https://github.com/jrl-umi3218/mc_naoqi
+- name: libfranka
+  url: https://github.com/frankaemika/libfranka
+  icon: mc_franka.png
+  pkg:
+    name: mc_franka
+    url: https://github.com/jrl-umi3218/mc_franka
+- name: UDP Communication
+  url: https://openrtm.org/openrtm/
+  icon: mc_udp.png
+  pkg:
+    name: mc_udp
+    url: https://github.com/jrl-umi3218/mc_udp
+- name: MuJoCo
+  url: https://mujoco.org/
+  icon: mujoco.png
+  pkg:
+    name: mc_mujoco
+    url: https://github.com/rohanpsingh/mc_mujoco
+- name: RTDE
+  url: https://www.universal-robots.com/articles/ur/interface-communication/real-time-data-exchange-rtde-guide/
+  icon: ur_rtde.png
+  pkg:
+    name: mc_rtde
+    url: https://github.com/isri-aist/mc_rtde

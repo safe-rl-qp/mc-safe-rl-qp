@@ -1,0 +1,36 @@
+---
+layout: tutorials
+toc: true
+interfaces:
+  - id: ticker
+    name: Open-loop (mc_rtc_ticker)
+  - id: cnoid
+    name: Choreonoid (mc_openrtm)
+  - id: vrep
+    name: V-REP (mc_vrep)
+---
+
+{% translate_file tutorials/introduction/running-a-controller.html %}
+
+<div class="no_toc_section">
+
+<ul class="nav nav-tabs" id="interfaceTab" role="tablist">
+  {% for itf in page.interfaces %}
+    <li class="nav-item">
+      <a class="nav-link{%if forloop.index0 == 0 %} active{% endif %}" id="{{itf.id}}Tab" data-toggle="tab" href="#{{itf.id}}TabContent" role="tab" aria-controls="{{itf.id}}TabContent" aria-selected="{% if forloop.index0 == 0 %}true{% else %}false{% endif %}">{{itf.name}}</a>
+    </li>
+  {% endfor %}
+</ul>
+<div class="tab-content" id="interfaceTabContent">
+  {% for itf in page.interfaces %}
+    <div class="tab-pane{% if forloop.index0 == 0 %} show active{% endif %}" id="{{itf.id}}TabContent" role="tabpanel" arial-labelledby="{{itf.id}}Tab">
+      <div class="card bg-light">
+        <div class="card-body">
+          {% translate_file tutorials/introduction/running/{{itf.id}}.html %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+</div>

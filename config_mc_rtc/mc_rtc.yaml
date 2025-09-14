@@ -1,0 +1,70 @@
+MainRobot: H1
+Enabled: RLController
+Plugins: [ExternalForcesEstimator]
+Timestep: 0.0025 #400Hz
+
+Unitree:
+
+  h1:
+    #network-interface: enp45s0 # For the real-robot depending on your network interface
+    network-interface: lo # To run in Unitree-mujoco in local
+
+#     These gains are set during the init but they will be updated by the controller
+    kp: [1500.0, 1500.0, 1500.0, 1500.0, 1500.0,
+         1500.0, 1500.0, 1500.0, 1500.0, 1500.0,
+         200.0, 200.0, 100.0, 100.0, 200.0,
+         200.0, 100.0, 100.0, 200.0, 0.0]
+
+    kd: [25.0, 25.0, 25.0, 25.0, 25.0,
+         25.0, 25.0, 25.0, 25.0, 25.0,
+          6.0,  2.0,  2.0,  2.0, 2.0,
+          2.0,  2.0,  2.0,  2.0, 0.0]
+
+    kp_wait: [1500.0, 1500.0, 1500.0, 1500.0, 1500.0,
+              1500.0, 1500.0, 1500.0, 1500.0, 1500.0,
+               200.0,  200.0,  100.0,  100.0,  200.0,
+               200.0,  100.0,  100.0,  200.0,    0.0]
+
+    kd_wait: [25.0, 25.0, 25.0, 25.0, 25.0,
+              25.0, 25.0, 25.0, 25.0, 25.0,
+               6.0,  2.0,  2.0,  2.0,  2.0,
+               2.0,  2.0,  2.0,  2.0,  0.0]
+
+    q_init: [0.0, 0.0, -0.2, 0.6, -0.4,
+             0.0, 0.0, -0.2, 0.6, -0.4,
+             0.0, 0.4, 0.0, 0.0, -0.4,
+             0.4, 0.0, 0.0, -0.4]
+
+# MainRobot: Kinova
+# Enabled: PostureDatastoreController
+# Plugins: [RosPosturePubSub, ExternalForcesEstimator]
+#
+# Timestep: 0.001
+# LogPolicy: threaded
+# Kortex:
+#   init_posture:
+#     on_startup: false
+#     posture: [0.0,0.4173, 3.1292, -2.1829, 0.0, 1.0342, 1.5226]
+#   torque_control:
+#     mode: custom
+#     lambda: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+#     friction_compensation:
+#         velocity_threshold: 0.05 # in rad
+#         acceleration_threshold: 5 # in rad, for cases where velocity is below threshold
+# #         These values can be tuned
+#         stiction: [2.7, 2.7, 2.7, 2.7, 1.5, 1.5, 1.5]
+#         coulomb: [2.7, 2.7, 2.7, 2.7, 1.5, 1.5, 1.5]
+#         viscous: [1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0]
+#     integral_term:
+#       theta: 2
+#       gain: 40
+#
+#   kinova_default: # Name of the robot in the controller
+#     ip: 192.168.1.10
+#     username: admin
+#     password: admin
+#
+#   kinova_bota: # Name of the robot in the controller
+#     ip: 192.168.1.10
+#     username: admin
+#     password: admin

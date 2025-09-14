@@ -1,0 +1,18 @@
+// This configuration file is used to run controller tests
+{
+  "MainRobot" : "@TEST_ROBOT_NAME@",
+
+  "Enabled"   : ["Posture"],
+
+  "Timestep" : 0.005,
+
+  "Log" : false,
+
+  "ClearControllerModulePath" : true,
+  "ControllerModulePaths" : ["@PROJECT_BINARY_DIR@/src/mc_control"],
+  "ClearRobotModulePath" : true,
+  "RobotModulePaths" : ["@PROJECT_BINARY_DIR@/tests/robots/@TEST_ROBOT_NAME@"],
+  "ClearObserverModulePath": true,
+  "ObserverModulePaths": ["@OBSERVER_MODULE_PATH@"],
+  "ClearGlobalPluginPath": true
+}

@@ -1,0 +1,17 @@
+{
+  "title": "mc_tasks::AddContactTask",
+  "type": "object",
+  "allOf":
+  [
+    {
+      "properties":
+      {
+        "type": { "enum": ["addContact"] }
+      }
+    },
+    {
+      "$ref": "/../../common/AddRemoveContactTask_common.json"
+    }
+  ],
+  "required": ["type", "contact"]
+}

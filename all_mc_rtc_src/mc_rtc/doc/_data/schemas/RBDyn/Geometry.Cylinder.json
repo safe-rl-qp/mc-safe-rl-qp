@@ -1,0 +1,11 @@
+{
+  "title": "rbd::parsers::Geometry::Cylinder",
+  "type": "object",
+  "properties":
+  {
+    "radius": { "type": "number" },
+    "length": { "type": "number" }
+  },
+  "required": ["radius", "length"],
+  "additionalProperties": false
+}

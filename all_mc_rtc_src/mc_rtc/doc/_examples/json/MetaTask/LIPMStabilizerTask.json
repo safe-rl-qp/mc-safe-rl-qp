@@ -1,0 +1,26 @@
+{
+   "type": "lipm_stabilizer",
+   "contacts": [ "Left", "Right" ],
+   "Left": {
+      "rotation": [ 0, 0, 0 ],
+      "height": 0
+   },
+   "Right": {
+      "overwriteRotationRPY": {
+        "roll": 0,
+        "pitch": 0
+      },
+      "height": 0
+   },
+   "jvrc1": {
+      "dcm_tracking": {
+         "gains": {
+            "prop": 4,
+            "integral": 10,
+            "deriv": 0.5
+         },
+         "derivator_time_constant": 1,
+         "integrator_time_constant": 10
+      }
+   }
+}

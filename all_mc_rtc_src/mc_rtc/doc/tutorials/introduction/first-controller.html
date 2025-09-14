@@ -1,0 +1,134 @@
+---
+layout: tutorials
+toc: true
+make_new_controller:
+  - name: C++
+    lang: raw
+    translate: tutorials/introduction/first-controller/create-cpp.html
+  - name: Python
+    lang: raw
+    translate: tutorials/introduction/first-controller/create-python.html
+  - name: GitHub
+    lang: raw
+    source: |
+      <p>Use the <a href="https://github.com/mc-rtc/new-controller">mc-rtc/new-controller</a> template project. This is equivalent to using the <code>mc_rtc_new_controller</code> tool with extra goodies.</p>
+constructor_sources:
+  - name: C++
+    lang: cpp
+    source: |
+      solver().addConstraintSet(contactConstraint);
+      solver().addConstraintSet(kinematicsConstraint);
+      solver().addTask(postureTask);
+  - name: Python
+    lang: python
+    source: |
+      self.qpsolver.addConstraintSet(self.kinematicsConstraint)
+      self.qpsolver.addConstraintSet(self.contactConstraint)
+      self.qpsolver.addTask(self.postureTask)
+reset_sources:
+  - name: C++
+    lang: cpp
+    source: |
+      void MyFirstController::reset(const mc_control::ControllerResetData & reset_data)
+      {
+        mc_control::MCController::reset(reset_data);
+      }
+  - name: Python
+    lang: python
+    source: |
+      def reset_callback(self, data):
+          pass
+run_sources:
+  - name: C++
+    lang: cpp
+    source: |
+      bool MyFirstController::run()
+      {
+        return mc_control::MCController::run();
+      }
+  - name: Python
+    lang: python
+    source: |
+      def run_callback(self):
+          return True
+create_sources:
+  - name: C++
+    lang: cpp
+    translate: tutorials/introduction/first-controller/create_sources.cpp
+  - name: Python
+    lang: python
+    source: |
+      @staticmethod
+      def create(robot, dt):
+          env = mc_rbdyn.get_robot_module("env", mc_rtc.MC_ENV_DESCRIPTION_PATH, "ground")
+          return MyFirstController([robot,env], dt)
+properties_sources:
+  - name: C++
+    lang: cpp
+    translate: tutorials/introduction/first-controller/properties_sources.cpp
+  - name: Python
+    lang: python
+    translate: tutorials/introduction/first-controller/properties_sources.py
+init_jindex_sources:
+  - name: C++
+    lang: cpp
+    source: |
+      jointIndex = robot().jointIndexByName("NECK_Y");
+  - name: Python
+    lang: python
+    source: |
+      self.jointIndex = self.robot().jointIndexByName("NECK_Y")
+switch_target_sources:
+  - name: C++
+    lang: cpp
+    source: |
+      void MyFirstController::switch_target()
+      {
+        if(goingLeft)
+        {
+          postureTask->target({{"NECK_Y", robot().qu()[jointIndex]}});
+        }
+        else
+        {
+          postureTask->target({{"NECK_Y", robot().ql()[jointIndex]}});
+        }
+        goingLeft = !goingLeft;
+      }
+  - name: Python
+    lang: python
+    source: |
+      def switch_target(self):
+          if self.goingLeft:
+              self.postureTask.target({"NECK_Y": self.robot().qu[self.jointIndex]})
+          else:
+              self.postureTask.target({"NECK_Y": self.robot().ql[self.jointIndex]})
+          self.goingLeft = not self.goingLeft
+update_target_sources:
+  - name: C++
+    lang: cpp
+    source: |
+      bool MyFirstController::run()
+      {
+        if(std::abs(postureTask->posture()[jointIndex][0] - robot().mbc().q[jointIndex][0]) < 0.05)
+        {
+          switch_target();
+        }
+        return mc_control::MCController::run();
+      }
+  - name: Python
+    lang: python
+    source: |
+      def run_callback(self):
+          if abs(self.postureTask.posture()[self.jointIndex][0] - self.robot().mbc.q[self.jointIndex][0]) < 0.05:
+              self.switch_target()
+          return True
+show_joints_sources:
+  - name: Python
+    lang: python
+    translate: tutorials/introduction/first-controller/show_joints_sources.py
+  - name: C++
+    lang: cpp
+    translate: tutorials/introduction/first-controller/show_joints_sources.cpp
+---
+
+{% translate_file tutorials/introduction/first-controller.html %}

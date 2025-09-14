@@ -1,0 +1,63 @@
+{
+  "Stabilizer::Standing": {
+    "base": "StabilizerStandingState",
+    "stiffness": 5,
+    "StabilizerConfig": {
+      "type": "lipm_stabilizer",
+      "leftFootSurface": "LeftFootCenter",
+      "rightFootSurface": "RightFootCenter",
+      "enabled": true,
+      "contacts": [ "Left", "Right" ],
+      "Left": {
+        "overwriteRotationRPY": {
+          "roll": 0,
+          "pitch": 0
+        },
+        "height": 0
+      },
+      "Right": {
+        "overwriteRotationRPY": {
+          "roll": 0,
+          "pitch": 0
+        },
+        "height": 0
+      }
+    }
+  },
+  "Stabilizer::GoCenter": {
+    "base": "Stabilizer::Standing",
+    "above": "CenterSurfaces",
+    "completion": {
+      "dcmEval": [ 0.005, 0.005, 0.05 ]
+    }
+  },
+  "Stabilizer::GoLeft": {
+    "base": "Stabilizer::GoCenter",
+    "above": "LeftSurface"
+  },
+  "Stabilizer::GoRight": {
+    "base": "Stabilizer::GoLeft",
+    "above": "RightSurface"
+  },
+  "Stabilizer::LeftSupport": {
+    "base": "Stabilizer::GoLeft",
+    "completion": {},
+    "StabilizerConfig": {
+      "contacts": [ "Left" ]
+    }
+  },
+  "Stabilizer::RightSupport": {
+    "base": "Stabilizer::GoRight",
+    "completion": {},
+    "StabilizerConfig": {
+      "contacts": [ "Right" ]
+    }
+  },
+  "Stabilizer::GoHalfSitting": {
+    "base": "Parallel",
+    "states": [
+      "Stabilizer::GoCenter",
+      "HalfSitting"
+    ]
+  }
+}

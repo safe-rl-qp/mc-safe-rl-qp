@@ -1,0 +1,6 @@
+{
+  "type": "vectorOrientation",
+  "frame": "dcamera",
+  "frameVector": [1.0, 0.0, 0.0],
+  "targetVector": [0.0, 0.0, 1.0]
+}

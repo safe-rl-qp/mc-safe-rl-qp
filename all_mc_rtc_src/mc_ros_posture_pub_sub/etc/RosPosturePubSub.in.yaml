@@ -1,0 +1,6 @@
+---
+ros_posture_pub_sub:
+  state_topic: "/joint_trajectory_controller/state"
+  command_topic: "/joint_trajectory_controller/joint_trajectory"
+  freq: 100
+

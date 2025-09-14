@@ -1,0 +1,84 @@
+namespace mc_rtc.log;
+
+table Bool
+{
+  b:bool;
+}
+
+table Double
+{
+  d:double;
+}
+
+table DoubleVector
+{
+  v:[double];
+}
+
+table UnsignedInt
+{
+  i:uint;
+}
+
+table UInt64
+{
+  i:ulong;
+}
+
+table String
+{
+  s:string;
+}
+
+table Vector2d
+{
+  x:double;
+  y:double;
+}
+
+table Vector3d
+{
+  x:double;
+  y:double;
+  z:double;
+}
+
+table Quaterniond
+{
+  w:double;
+  x:double;
+  y:double;
+  z:double;
+}
+
+table PTransformd
+{
+  ori:Quaterniond;
+  pos:Vector3d;
+}
+
+table ForceVecd
+{
+  couple:Vector3d;
+  force:Vector3d;
+}
+
+table MotionVecd
+{
+  angular:Vector3d;
+  linear:Vector3d;
+}
+
+// !!!!! IMPORTANT !!!!!
+// ALWAYS APPEND NEW TYPES AT THE END OF THIS UNION
+// Doing so guarantees that old logs remain readable
+// !!!!! IMPORTANT !!!!!
+union LogData { Bool, Double, DoubleVector, UnsignedInt, String, Vector3d, Quaterniond, PTransformd, ForceVecd, MotionVecd, Vector2d, UInt64 }
+
+table Log
+{
+  keys:[string];
+  values:[LogData];
+}
+
+root_type Log;

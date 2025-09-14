@@ -1,0 +1,17 @@
+# # KinovaGen3
+# residual_gain: 30
+# reference_frame: FT_sensor_wrench
+# verbose: false
+# ft_sensor_name: EEForceSensor
+# use_force_sensor: true
+# torque_source_type: JointTorqueMeasurement
+# residual_speed_gain: 100
+
+# H1
+residual_gain: 30
+reference_frame: pelvis
+verbose: false
+ft_sensor_name: none
+use_force_sensor: false
+torque_source_type: CommandedTorque
+residual_speed_gain: 100

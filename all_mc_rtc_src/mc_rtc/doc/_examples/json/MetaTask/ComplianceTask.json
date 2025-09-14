@@ -1,0 +1,9 @@
+{
+  "type": "compliance",
+  "body": "R_WRIST_Y_S",
+  "wrench":
+  {
+    "couple": [0.0, 0.0, 0.0],
+    "force": [0.0, 0.0, 0.0]
+  }
+}

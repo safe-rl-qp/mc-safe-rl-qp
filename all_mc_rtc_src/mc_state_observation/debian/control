@@ -1,0 +1,37 @@
+Source: mc-state-observation
+Priority: optional
+Maintainer: Pierre Gergondet <pierre.gergondet+ppa@gmail.com>
+Standards-Version: 3.9.5
+Section: libs
+Homepage: https://github.com/isri-aist/QpSolverCollection
+Build-Depends: debhelper (>= 9),
+               pkg-config,
+               cmake,
+               doxygen,
+               doxygen-latex,
+               graphviz,
+               libmc-rtc-dev,
+               libgram-savitzky-golay-dev,
+               ros-@ROS_DISTRO@-mc-rtc-plugin,
+               ros-@ROS_DISTRO@-tf2-eigen
+
+Package: mc-state-observation
+Section: libdevel
+Architecture: any
+Depends: libmc-rtc-dev, ${shlibs:Depends}, ${misc:Depends}
+Suggests: ros-@ROS_DISTRO@-mc-state-observation
+Description: Extra observers for mc-rtc
+
+Package: ros-@ROS_DISTRO@-mc-state-observation
+Section: libdevel
+Architecture: any
+Depends: mc-state-observation, ${shlibs:Depends}, ${misc:Depends}
+Description: Extra observers for mc-rtc with ROS components
+
+Package: mc-state-observation-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}
+Multi-Arch: foreign
+Suggests: mc-state-observation, ros-@ROS_DISTRO@-mc-state-observation
+Description: Documentation for mc-state-observation

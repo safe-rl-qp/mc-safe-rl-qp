@@ -1,0 +1,13 @@
+type: cop
+frame: LeftFootCenter
+cop: [2.0, 0.0]
+targetFrame:
+  robot: ground
+  frame: AllGround
+  offset:
+    translation: [0.0, 0.0, 0.1]
+    rotation: [3.14, 0.0, 0.0]
+force: [0.0, 0.0, 0.0]
+admittance:
+  couple: [0.0, 0.005, 0.0]
+  force: [0.0, 0.0, 0.0005]

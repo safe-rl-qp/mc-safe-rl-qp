@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    {% include head-common.html %}
+    <title>{% if page.title %}{% t page.title %} - {% else if layout.title %}{%t layout.title %} - {% endif %}mc_rtc</title>
+  </head>
+
+  <body>
+    {% include header-common.html %}
+
+    <div class="container-fluid">
+    {{ content }}
+    </div>
+
+    {% include footer-common.html %}
+  </body>
+
+  {% include clipboard-js.html %}
+
+</html>

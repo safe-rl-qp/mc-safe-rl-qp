@@ -1,0 +1,14 @@
+{
+  "type": "removeContact",
+  "contact":
+  {
+    "r1Surface": "LeftFoot",
+    "r2Surface": "AllGround",
+    "r1": "jvrc1",
+    "r2": "ground",
+    "isFixed": false
+  },
+  "speed": 0.05,
+  "stiffness": 1.0,
+  "weight": 100.0
+}

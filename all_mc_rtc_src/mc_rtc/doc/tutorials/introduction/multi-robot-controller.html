@@ -1,0 +1,77 @@
+---
+layout: tutorials
+toc: true
+constructor_sources:
+  - name: C++
+    lang: cpp
+    source: |
+      #include <mc_rbdyn/RobotLoader.h>
+
+      MyFirstController::MyFirstController(mc_rbdyn::RobotModulePtr rm, double dt, const mc_rtc::Configuration & config)
+      : mc_control::MCController({rm,
+          mc_rbdyn::RobotLoader::get_robot_module("env", std::string(mc_rtc::MC_ENV_DESCRIPTION_PATH) + "/../mc_int_obj_description", std::string("door")),
+          mc_rbdyn::RobotLoader::get_robot_module("env", std::string(mc_rtc::MC_ENV_DESCRIPTION_PATH), std::string("ground"))}, dt)
+  - name: Python
+    lang: python
+    source: |
+      @staticmethod
+      def create(robot, dt):
+          door = mc_rbdyn.get_robot_module("env", mc_rtc.MC_ENV_DESCRIPTION_PATH + "/../mc_int_obj_description", "door")
+          ground = mc_rbdyn.get_robot_module("env", mc_rtc.MC_ENV_DESCRIPTION_PATH, "ground")
+          return MyFirstController([robot, door, ground], dt)
+set_contact_sources:
+  - name: C++
+    lang: cpp
+    source: |
+      addContact({robot().name(), "ground", "LeftFoot", "AllGround"});
+      addContact({robot().name(), "ground", "RightFoot", "AllGround"});
+  - name: Python
+    lang: python
+    source: |
+      self.addContact(self.robot().name(), "ground", "LeftFoot", "AllGround")
+      self.addContact(self.robot().name(), "ground", "RightFoot", "AllGround")
+reposition_door_sources:
+  - name: C++
+    lang: cpp
+    translate: tutorials/introduction/multi-robot-controller/reposition_door.cpp
+  - name: Python
+    lang: python
+    translate: tutorials/introduction/multi-robot-controller/reposition_door.py
+add_door_tasks_sources:
+  - name: C++
+    lang: cpp
+    translate: tutorials/introduction/multi-robot-controller/add_door_tasks.cpp
+  - name: Python
+    lang: python
+    translate: tutorials/introduction/multi-robot-controller/add_door_tasks.py
+logic_setup_sources:
+  - name: C++
+    lang: cpp
+    translate: tutorials/introduction/multi-robot-controller/logic_setup.cpp
+  - name: Python
+    lang: python
+    translate: tutorials/introduction/multi-robot-controller/logic_setup.py
+p1_sources:
+  - name: C++
+    lang: cpp
+    translate: tutorials/introduction/multi-robot-controller/p1.cpp
+  - name: Python
+    lang: python
+    translate: tutorials/introduction/multi-robot-controller/p1.py
+p2_sources:
+  - name: C++
+    lang: cpp
+    translate: tutorials/introduction/multi-robot-controller/p2.cpp
+  - name: Python
+    lang: python
+    translate: tutorials/introduction/multi-robot-controller/p2.py
+p3_sources:
+  - name: C++
+    lang: cpp
+    translate: tutorials/introduction/multi-robot-controller/p3.cpp
+  - name: Python
+    lang: python
+    translate: tutorials/introduction/multi-robot-controller/p3.py
+---
+
+{% translate_file tutorials/introduction/multi-robot-controller.html %}

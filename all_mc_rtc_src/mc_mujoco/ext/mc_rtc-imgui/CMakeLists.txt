@@ -1,0 +1,34 @@
+set(mc_rtc-imgui-SRC
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/Schema.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/form/schema.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/form/widgets.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/Category.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/Client.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/Plot.cpp
+  PARENT_SCOPE
+)
+
+set(mc_rtc-imgui-HDR
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/NumberInput.h
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/Table.h
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/Label.h
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/details/SingleInput.h
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/NumberSlider.h
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/IntegerInput.h
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/ComboInput.h
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/ArrayLabel.h
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/StringInput.h
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/ArrayInput.h
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/Button.h
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/Checkbox.h
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/Form.h
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/DataComboInput.h
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/Schema.h
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/form/schema.h
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/form/widgets.h
+  ${CMAKE_CURRENT_LIST_DIR}/Widget.h
+  ${CMAKE_CURRENT_LIST_DIR}/Category.h
+  ${CMAKE_CURRENT_LIST_DIR}/Client.h
+  ${CMAKE_CURRENT_LIST_DIR}/Plot.h
+  PARENT_SCOPE
+)

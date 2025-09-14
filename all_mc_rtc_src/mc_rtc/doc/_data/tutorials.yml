@@ -1,0 +1,104 @@
+-
+  id: introduction
+  tutorials:
+    -
+      id: installation-guide
+    -
+      id: configuration
+    -
+      id: running-a-controller
+    -
+      id: first-controller
+    -
+      id: com-controller
+    -
+      id: ef-controller
+    -
+      id: multi-robot-controller
+-
+  id: usage
+  tutorials:
+    -
+      id: mc_rtc_configuration
+    -
+      id: logging
+    -
+      id: console-logging
+    -
+      id: gui
+    -
+      id: live-plotting
+    -
+      id: ros
+    -
+      id: global-plugins
+    -
+      id: schema
+-
+  id: tools
+  tutorials:
+    -
+      id: mc_rtc_ticker-and-replay
+    -
+      id: mc_log_utils
+    -
+      id: mc_log_ui
+    -
+      id: mc_log_visualization
+    -
+      id: mc_surfaces_visualization
+    -
+      id: mc_convex_visualization
+-
+  id: recipes
+  tutorials:
+    -
+      id: fsm
+    -
+      id: fsm-main-states
+    -
+      id: fsm-example
+    -
+      id: derived-fsm
+    -
+      id: datastore
+    -
+      id: observers
+    -
+      id: lipm-stabilizer
+    -
+      id: speed-constraint
+    -
+      id: moving-a-contact
+    -
+      id: contact-dof
+    -
+      id: joint-select
+    -
+      id: dim-weight
+    -
+      id: joint-stiffness
+    -
+      id: com-constraint
+-
+  id: samples
+  tutorials:
+    -
+      id: list-of-samples
+    -
+      id: sample-admittance
+-
+  id: advanced
+  tutorials:
+    -
+      id: new-plugin
+    -
+      id: new-interface
+    -
+      id: new-environment
+    -
+      id: new-robot
+    -
+      id: support-mc-rtc-build-static
+    -
+      id: debug-lssol-output-6

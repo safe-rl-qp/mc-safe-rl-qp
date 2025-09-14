@@ -1,0 +1,10 @@
+{
+  "title": "rbd::parsers::Geometry::Box",
+  "type": "object",
+  "properties":
+  {
+    "size": { "type": "number" }
+  },
+  "required": ["size"],
+  "additionalProperties": false
+}
