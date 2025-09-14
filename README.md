@@ -3,6 +3,8 @@
 This repository contains the source code used for the experiments in the paper *Safe Execution of RL Policies via Acceleration-based QP Constraint Enforcement*.  
 It is designed to be built as part of an [`mc_rtc`](https://github.com/mc-rtc/mc-rtc-superbuild) superbuild environment.
 
+Experiment logs used in the paper are also provided in the `ExperimentLogs` folder.
+
 ## Installation
 
 1. **Install `mc_rtc` superbuild**  
